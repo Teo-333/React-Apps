@@ -1,0 +1,49 @@
+.order-item {
+    display: flex;
+    align-items: center;
+    background-color: #f8fafa;
+    border: 1px solid #e7e7e7;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    width: 70%;
+  }
+  
+  .order-item-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  .order-item-title {
+    flex: 2;
+    font-size: 18px;
+    margin: 0 20px;
+  }
+  
+  .order-item-price {
+    flex: 1;
+    font-size: 16px;
+    color: #40c4c1;
+  }
+  
+  .order-item-quantity {
+    width: 50px;
+    padding: 5px;
+    margin: 0 10px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+  }
+  
+  .order-item-button {
+    background-color: #40c4c1;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
