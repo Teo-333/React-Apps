@@ -1,0 +1,63 @@
+{
+  "todo": [
+    {
+      "assignedTo": {
+        "name": "Fedor Rushkevich"
+      },
+      "creation_time": "2024-05-02T13:51:45.778Z",
+      "id": "5",
+      "references": [],
+      "title": "Fix the Rerender of Footer and Header"
+    },
+    {
+      "assignedTo": {
+        "name": "Fedor Rushkevich"
+      },
+      "creation_time": "2024-05-03T09:13:25.422Z",
+      "id": "6",
+      "references": [],
+      "title": "Rewrite Header and fix all css"
+    }
+  ],
+  "in-progress": [
+    {
+      "assignedTo": {
+        "name": "Fedor Rushkevich"
+      },
+      "creation_time": "2024-04-30T12:16:01.705Z",
+      "id": "3",
+      "references": [],
+      "title": "Rewrite Custom Hook"
+    }
+  ],
+  "testing": [],
+  "done": [
+    {
+      "assignedTo": {
+        "name": "Fedor Rushkevich"
+      },
+      "creation_time": "2024-04-30T12:14:35.378Z",
+      "id": "1",
+      "references": [],
+      "title": "Create routes.jsx"
+    },
+    {
+      "assignedTo": {
+        "name": "Fedor Rushkevich"
+      },
+      "creation_time": "2024-04-30T12:14:42.762Z",
+      "id": "2",
+      "references": [],
+      "title": "Set up routing"
+    },
+    {
+      "assignedTo": {
+        "name": "Fedor Rushkevich"
+      },
+      "creation_time": "2024-04-30T12:16:28.455Z",
+      "id": "4",
+      "references": [],
+      "title": "Write Home page content"
+    }
+  ]
+}
