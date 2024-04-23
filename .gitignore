@@ -1,15 +1,21 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+<<<<<<< HEAD
 # vscode extensions
 # /.vscode
+=======
+>>>>>>> ce36412 ((UT-02): fix better project structure)
 # dependencies
 /node_modules
 /.pnp
 .pnp.js
 
+<<<<<<< HEAD
 #config
 /src/config/*
 
+=======
+>>>>>>> ce36412 ((UT-02): fix better project structure)
 # testing
 /coverage
 
