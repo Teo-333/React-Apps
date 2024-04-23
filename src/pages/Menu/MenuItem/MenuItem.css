@@ -1,0 +1,113 @@
+.menu-item {
+  display: grid;
+  grid-template-areas:
+    'image title price'
+    'image description description'
+    'image  add add';
+  grid-template-columns: auto 2.5fr 1fr;
+  gap: 10px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding: 15px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  max-width: auto;
+  max-height: auto;
+}
+
+.menu-item-image {
+  grid-area: image;
+  width: 100%;
+  max-width: 120px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.menu-item-title {
+  display: flex;
+  grid-area: title;
+  margin: 0;
+  color: #333;
+  font-size: 1.0em;
+  align-items: start;
+}
+
+.menu-item-description {
+  font-size: 1em;
+  margin: 5px 0;
+  grid-area: description;
+  max-height: 3em; 
+  overflow: hidden;
+  position: relative;
+  line-height: 1.5em;
+  width: auto;
+  font-size: 1em;
+  margin: 5px 0; 
+  cursor: pointer;
+}
+
+.read-more {
+  font-size: 1em;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #35B8BE;
+  border-radius: 50rem;
+  margin-bottom: 5px;
+  width: 1rem;
+  display: flex;
+  text-align: center;
+}
+
+.expanded {
+  max-height: none;
+}
+
+.menu-item-price {
+  grid-area: price;
+    color: #35B8BE;
+  display: flex;
+  align-items: center;
+  font-size: 0.3rem;
+  justify-content: center;
+}
+
+.menu-item-add {
+  grid-area: add;
+  display: flex;
+  align-items: center;
+}
+
+.menu-item-quantity {
+  display: flex;
+  width: 0.8rem;
+  height: 0.4rem;
+  text-align: center;
+  justify-content: center;
+  align-self: center;
+  padding: 5px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.menu-item-button {
+  background-color: #35B8BE;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.menu-item-button:hover {
+  background-color: #139a9b;
+}
