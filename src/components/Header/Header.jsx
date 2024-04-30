@@ -3,6 +3,8 @@ import './Header.css';
 import NavLogo from '../../assets/images/Nav-logo.svg'; 
 import ShoppingCart from '../../assets/images/Nav-shopping-cart.svg'; 
 import { BUTTONS } from '../../constants/constants'; 
+import { Link } from 'react-router-dom';
+
 
 
 const Header = ({ count }) => {
@@ -30,7 +32,7 @@ const Header = ({ count }) => {
   
       <div className={`navbar-links ${hamburgerOpen ? 'visible' : ''}`}>
         {BUTTONS[3].navBar.map((button, index) => { 
-            return <a key={index} id={`nav-link-${index}`} href={`/${button.toLowerCase()}`} className="nav-link">{button}</a>;
+            return <Link key={index} id={`nav-link-${index}`} href={`/${button.toLowerCase()}`} className="nav-link" to={"/" + button.toLocaleLowerCase()}>{button}</Link>;
         })}
       </div>
 

@@ -61,12 +61,11 @@
   background-color: #35B8BE;
   border-radius: 50px;
   margin-bottom: 5px;
-  width: 60px;
-  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  max-height: 55px
 }
 
 .expanded {
