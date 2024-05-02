@@ -8,11 +8,17 @@ import Main from "../src/pages/Error/Main/Main";
 export const router = createBrowserRouter([
     {
       path: "/home",
-      component: <Home/>,
+      element: <Home/>,
     },
     {
       path: "/",
       element: <Menu />,
-      errorElement: <Main />, // Optional
+      errorElement: <Main />, 
     },
+    {
+      path: "/menu",
+      element: <Menu />,
+    }
   ]);
+
+// TODO: Fix Rerender of Footer and Header
