@@ -3,13 +3,14 @@ import './Header.css';
 import NavLogo from '../../assets/images/Nav-logo.svg'; 
 import ShoppingCart from '../../assets/images/Nav-shopping-cart.svg'; 
 import { BUTTONS } from '../../constants/constants'; 
-import { Link } from 'react-router-dom';
+import { useCount } from '../../contexts/CountContext.js';
 
 
 
-const Header = ({ count }) => {
+const Header = () => {
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
   const [logoAnimation, setLogoAnimation] = useState('');
+  const { count } = useCount();
 
   const toggleHamburger = () => {
     setHamburgerOpen(!hamburgerOpen);
@@ -17,6 +18,10 @@ const Header = ({ count }) => {
       ? 'logo-animate' 
       : 'logo-animate-back');
   };
+
+  const handleButtonClick = (button) => {
+    window.location.href = `/${button.toLowerCase()}`;
+  }
 
   return (
     <nav className="navbar">
@@ -29,13 +34,25 @@ const Header = ({ count }) => {
           id="logo-button"
         />
       </div>
-  
-      <div className={`navbar-links ${hamburgerOpen ? 'visible' : ''}`}>
+      {/* <div className={`navbar-links ${hamburgerOpen ? 'visible' : ''}`}>
         {BUTTONS[3].navBar.map((button, index) => { 
-            return <Link key={index} id={`nav-link-${index}`} href={`/${button.toLowerCase()}`} className="nav-link" to={"/" + button.toLocaleLowerCase()}>{button}</Link>;
+            return <Link key={index} id={`nav-link-${index}`} className="nav-link" to={"/" + button.toLocaleLowerCase()}>{button}</Link>;
         })}
-      </div>
+      </div> */}
 
+    <div className={`navbar-links ${hamburgerOpen ? 'visible' : ''}`}>
+      {BUTTONS[3].navBar.map((button, index) => (
+        <span
+          key={index}
+          id={`nav-link-${index}`}
+          className="nav-link"
+          onClick={() => handleButtonClick(button)}
+          style={{ cursor: 'pointer' }}
+        >
+          {button}
+        </span>
+      ))}
+    </div>
       <button className="navbar-cart">
         <img  
           src={ShoppingCart} 

@@ -1,9 +1,11 @@
 import React, { useState, useCallback } from 'react';
+import { useCount } from '../../../contexts/CountContext.js';
 import './MenuItem.css'; 
 
-const MenuItem = ({ item, handleAddition }) => {
+const MenuItem = ({ item }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [inputValue, setInputValue] = useState(0);
+  const { handleAddition } = useCount();
 
   const toggleExpand = useCallback((e) => {
     e.stopPropagation();
