@@ -77,7 +77,7 @@ const HomeImg = styled.img`
   width: 70%;
 `;
 
-function Main() {
+function Home() {
 
   return (
     <App>
@@ -98,4 +98,4 @@ function Main() {
   );
 }
 
-export default Main;    
+export default Home;    

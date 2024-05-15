@@ -3,7 +3,7 @@ import { useRouteError } from "react-router-dom";
 import './Main.css';  
 import errorGif from '../../../assets/gif/Error.gif';
 
-function Main() {
+function Error() {
   const error = useRouteError();
   console.error(error);
 
@@ -24,4 +24,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default Error;

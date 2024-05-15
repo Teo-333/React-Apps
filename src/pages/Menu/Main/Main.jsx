@@ -8,7 +8,7 @@ import useFetch from '../../../hooks/useFetch.jsx';
 
 
 
-const Main = ({ handleAddition }) => {
+const Main = () => {
   const { items, error, updateCategory } = useFetch();
 
   return (
@@ -23,7 +23,7 @@ const Main = ({ handleAddition }) => {
             return <button key={"main-button-" + button + "-key"} id={`main-button-${button}`}  onClick={() => updateCategory(button)} className={`main-button main-button-${button}`}>{button}</button>;
           })}
         </div>
-        <Menu handleAddition={handleAddition} items={items} error={error} />
+        <Menu items={items} error={error} />
       </div>
       <div className="content-background">
         <img src={BackgroundImg} alt="Background" className="background-img"/>

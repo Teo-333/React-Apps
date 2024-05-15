@@ -3,7 +3,7 @@ import MenuItem from '../MenuItem/MenuItem.jsx';
 import './Menu.css';
 
 
-const Menu = ({ handleAddition,items,error }) => {
+const Menu = ({ items,error }) => {
   const [itemsToShow, setItemsToShow] = useState(30);
 
 const loadMore = useCallback(() => {
@@ -18,7 +18,7 @@ const loadMore = useCallback(() => {
       <div className='menu'>
         <div className="menu-grid">
           {items.slice(0, itemsToShow).map(item => (
-            <MenuItem key={item.id} item={item} handleAddition={handleAddition} />
+            <MenuItem key={item.id} item={item} />
           ))}
         </div>
         {itemsToShow < items.length && (
