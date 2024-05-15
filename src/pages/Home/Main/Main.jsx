@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import HomeImage from '../../../assets/images/Home-Image.svg';
 import Star from '../../../assets/images/Thrustpilot-Star.svg';
 
@@ -76,6 +77,7 @@ const ContentRating = styled.div`
 const HomeImg = styled.img`
   width: 70%;
 `;
+
 
 function Home() {
 

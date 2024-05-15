@@ -1,11 +1,12 @@
 import React from 'react';
+
 import { BUTTONS } from "../../../constants/constants.js";
-import './Main.css';
 import Tooltip from "../Tooltip/Tooltip.jsx";
 import Menu from "../Menu/Menu.jsx";
 import BackgroundImg from "../../../assets/images/Main-Background.svg";
 import useFetch from '../../../hooks/useFetch.jsx';
 
+import './Main.css';
 
 
 const Main = () => {

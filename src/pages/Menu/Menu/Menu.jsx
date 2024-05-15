@@ -1,5 +1,7 @@
 import React, { useState, useCallback } from 'react';
+
 import MenuItem from '../MenuItem/MenuItem.jsx';
+
 import './Menu.css';
 
 

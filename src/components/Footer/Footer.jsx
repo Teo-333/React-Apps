@@ -1,10 +1,12 @@
 import React from 'react';
+
 import FooterBackground from '../../assets/images/Footer-Background.svg';
 import { BUTTONS, SOCIALLINKS } from '../../constants/constants';
 import ButtonList from '../ButtonList/ButtonList';
-import './Footer.css';
 import SocialLink from '../SocialLink/SocialLink';
 import NavLogo from '../../assets/images/Nav-logo.svg';
+
+import './Footer.css';
 
 
 function Footer() {

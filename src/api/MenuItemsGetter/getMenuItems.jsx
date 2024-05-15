@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+
 async function getMenuItems(category = '') {
     try {
         const response = await axios.get('https://65de35f3dccfcd562f5691bb.mockapi.io/api/v1/meals');

@@ -1,25 +1,3 @@
-// import "./styles/App.css";
-// import Header from "./components/Header/Header.jsx";
-// import Footer from "./components/Footer/Footer.jsx";
-// import { RouterProvider } from "react-router-dom";
-// import { router } from "./router.jsx";
-// import { CountProvider } from "./context/CountContext.jsx";
-
-
-// function App() {
-//   return (
-//     <CountProvider>
-//       <div className="container">
-//           <Header />
-//           <RouterProvider router={router} />
-//           <Footer />
-//       </div>
-//     </CountProvider>
-//   );
-// }
-
-// export default App;
-
 import "./styles/App.css";
 
 import Header from "./components/Header/Header.jsx";

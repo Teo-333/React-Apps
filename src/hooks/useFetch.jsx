@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
+
 import getMenuItems from "../api/MenuItemsGetter/getMenuItems";
+
 
 function useFetch(initialCategory = '') {
     const [category, setCategory] = useState(initialCategory);

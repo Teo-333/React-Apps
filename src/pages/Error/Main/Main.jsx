@@ -1,7 +1,10 @@
 import React from 'react';
 import { useRouteError } from "react-router-dom";
+
 import './Main.css';  
+
 import errorGif from '../../../assets/gif/Error.gif';
+
 
 function Error() {
   const error = useRouteError();
