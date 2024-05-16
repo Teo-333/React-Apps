@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .home-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2vw; 
+    font-size: 4vw; 
+    z-index: 0;
+    position: relative;
+  }
+  
+
+  .home-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 2vw; 
+    padding: 2vw 0;
+  }
+  
+
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.4vw; 
+    max-width: 40vw; 
+  }
+  
+  .home-title {
+    font-size: 1em; 
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  
+
+  .home-text {
+    color: #546285;
+    font-size: 0.30em; 
+    line-height: 1.5; 
+    margin-bottom: 1.1vw; 
+    max-width: 70%;
+  }
+
+
+  .highlight {
+    color: #35B8BE;
+  }
+  
+
+  .primary-button {
+    background-color: #35B8BE;
+    color: white;
+    border: none;
+    padding: 1vw 2vw; 
+    border-radius: 0.2em; 
+    cursor: pointer;
+    font-size: 0.25em; 
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.2);
+    max-width: 40%;
+    border-radius: 50px;
+  }
+  
+  .primary-button:hover {
+    background-color: #1e8b94;
+  }
+
+
+  .trustpilot-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5em; 
+    font-weight: bold;
+  }
+  
+  .trustpilot-logo {
+    width: 0.5em;
+    height: auto; 
+  }
+  
+  .trustpilot-text{
+    font-size: 0.6rem;
+  }
+
+  .rating-text {
+    font-size: 0.25em; 
+  }
+  
+
+  .image-container {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .home-img {
+    max-width: 120%; 
+    height: auto; 
+    border-radius: 1em; 
+  }
+
+  .home-background{
+    position: absolute;
+    z-index: -1;
+    top: 0rem;
+    right: 14%;
+    max-width: 100%;
+  }
+  

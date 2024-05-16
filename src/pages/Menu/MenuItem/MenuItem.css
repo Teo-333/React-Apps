@@ -182,10 +182,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   width: 55px;
   height: 55px;
-  transition: all 0.5s ease-in-out; 
+  transition: all 0.4s ease-in-out; 
 }
 
 .read-more.expanded {
