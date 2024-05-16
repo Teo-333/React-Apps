@@ -12,6 +12,7 @@
     align-items: start;
     gap: 20px;
     margin-bottom: 0.4rem;
+    padding-top: 2rem;
   }
 
   .footer-column-left {
@@ -40,8 +41,12 @@
     position: absolute;
     z-index: -1;
     left: 0;
-    top: 115%;
     width: 100%;
+  }
+
+  .footer-background-img{
+    width: 100%;
+    top:1rem;
   }
 
   .blue{

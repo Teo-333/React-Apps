@@ -12,7 +12,9 @@ import './Footer.css';
 function Footer() {
   return (
     <footer className="footer">
-      <img className="footer-background" src={FooterBackground} alt="background" />
+      <div className='footer-background'>
+        <img className="footer-background-img" src={FooterBackground} alt="background" />
+      </div>
       <div className="footer-content">
         <div className="footer-column-left">
           <img 
