@@ -16,7 +16,6 @@ const loadMore = useCallback(() => {
   if (!items.length) return <div>Loading...</div>;
 
   return (
-    <>
       <div className='menu'>
         <div className="menu-grid">
           {items.slice(0, itemsToShow).map(item => (
@@ -29,7 +28,6 @@ const loadMore = useCallback(() => {
           </button>
         )}
       </div>
-    </>
   );
 };
 

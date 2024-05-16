@@ -28,17 +28,17 @@ const MenuItem = ({ item }) => {
 
   return (
     <div className="menu-item">
-      <img src={item.img} alt={item.meal} className="menu-item-image" />
-      <h3 className="menu-item-title">{item.meal}</h3>
-      <div className={`menu-item-description ${isExpanded ? 'expanded' : ''}`}>
-        {item.instructions}
-        <button className="read-more" onClick={toggleExpand}>{isExpanded ? 'Less' : 'More'}</button>
-      </div>
-      <div className="menu-item-price">{item.price} USD</div>
-      <div className="menu-item-add">
-        <input type="number" value={inputValue} min={1} className="menu-item-quantity" onChange={handleChange} />
-        <button className="menu-item-button" onClick={handleSubmit}>Add to cart</button>
-      </div>
+    <img src={item.img} alt={item.meal} className="menu-item-image" />
+    <h3 className="menu-item-title">{item.meal}</h3>
+    <div className={`menu-item-description ${isExpanded ? 'expanded' : ''}`}>
+      {item.instructions}
+      <button className={`read-more ${isExpanded ? 'expanded' : ''}`} onClick={toggleExpand}>{isExpanded ? 'Less' : 'More'}</button>
+    </div>
+    <div className="menu-item-price">{item.price} USD</div>
+    <div className="menu-item-add">
+      <input type="number" value={inputValue} min={1} className="menu-item-quantity" onChange={handleChange} />
+      <button className="menu-item-button" onClick={handleSubmit}>Add to cart</button>
+    </div>
     </div>
   );
 };
