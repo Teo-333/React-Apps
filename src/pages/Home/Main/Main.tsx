@@ -4,10 +4,9 @@ import './Main.css';
 
 import HomeImage from '../../../assets/images/Home-Image.svg';
 import Star from '../../../assets/images/Thrustpilot-Star.svg';
-import HomeBackground from "../../../assets/images/Home-Background.svg"
+import HomeBackground from "../../../assets/images/Home-Background.svg";
 
-
-function Home() {
+const Home: React.FC = () => {
   return (
     <div className="home-wrapper">
       <div className="home-container">
@@ -16,11 +15,11 @@ function Home() {
             Beautiful food & takeaway, <span className="highlight">delivered</span> to your door
           </h1>
           <p className="home-text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
           </p>
           <button className="primary-button">Place an Order</button>
           <div className="trustpilot-container">
-            <img className="trustpilot-logo" alt="Trustpilot-logo" src={Star} />
+            <img className="trustpilot-logo" src={Star} alt="Trustpilot logo" />
             <div className="trustpilot-text">Trustpilot</div>
           </div>
           <div className="rating-text">
@@ -28,11 +27,11 @@ function Home() {
           </div>
         </div>
         <div className="image-container">
-          <img className="home-img" alt="food-img" src={HomeImage} />
+          <img className="home-img" src={HomeImage} alt="Food" />
         </div>
       </div>
       <div className='home-background'>
-        <img src={HomeBackground} alt='background'></img>
+        <img src={HomeBackground} alt='Home background' />
       </div>
     </div>
   );

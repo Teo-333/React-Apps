@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, FormEvent, ChangeEvent } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../../config/firebase';
 import { useNavigate } from 'react-router-dom';
 import "./Main.css";
 
-const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+const Login: React.FC = () => {
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const [error, setError] = useState<string>('');
   const navigate = useNavigate();
 
-  const handleLogin = async (event) => {
+  const handleLogin = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setError('');
     try {
       await signInWithEmailAndPassword(auth, email, password);
       console.log("Logged in!");
       navigate('/menu');
-    } catch (error) {
+    } catch (error: any) { // Using 'any' here because the type of error can vary depending on the library
       setError("Failed to log in: " + error.message);
       console.error("Failed to log in:", error.message);
     } finally {
@@ -26,7 +26,7 @@ const Login = () => {
     }
   };
 
-  const handleCancel = (event) => {
+  const handleCancel = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     event.preventDefault();
     setEmail('');
     setPassword('');
@@ -43,7 +43,7 @@ const Login = () => {
             type="email"
             className='form_input'
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
             required
           />
         </div>
@@ -53,7 +53,7 @@ const Login = () => {
             type="password"
             className='form_input'
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
             required
           />
         </div>
@@ -61,7 +61,7 @@ const Login = () => {
           <button type="submit" className='primary'>Login</button>
           <button type="button" className='buttons-cancel' onClick={handleCancel}>Cancel</button>
         </div>
-        {error && <div className='error_message'>Sorry, something went wrong</div>}
+        {error && <div className='error_message'>{error}</div>}
       </form>
     </div>
   );

@@ -1,13 +1,15 @@
 import React from 'react';
 import { useRouteError } from "react-router-dom";
-
 import './Main.css';  
-
 import errorGif from '../../../assets/gif/Error.gif';
 
+interface RouteError {
+  statusText?: string;
+  message?: string;
+}
 
-function Error() {
-  const error = useRouteError();
+const Error: React.FC = () => {
+  const error = useRouteError() as RouteError;  
   console.error(error);
 
   return (
@@ -21,7 +23,7 @@ function Error() {
       </div>
     
       <div className='footer-block'>
-        <img src = {errorGif} alt = "error-gif" />
+        <img src={errorGif} alt="error-gif" />
       </div>
     </div>
   );
