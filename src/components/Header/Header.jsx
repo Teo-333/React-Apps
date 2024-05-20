@@ -6,7 +6,7 @@ import NavLogo from '../../assets/images/Nav-logo.svg';
 import ShoppingCart from '../../assets/images/Nav-shopping-cart.svg'; 
 import { BUTTONS } from '../../constants/constants'; 
 import { NavLink } from 'react-router-dom';
-import { CountContext } from '../../context/CountContext';
+import { CountContext } from '../../context/CountContext.tsx';
 
 
 const Header = () => {
