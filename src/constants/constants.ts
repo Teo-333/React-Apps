@@ -2,7 +2,15 @@ import InstagramIcon from "../assets/images/Instagram-icon.svg";
 import TwitterIcon from "../assets/images/Twitter-icon.svg";
 import YoutubeIcon from "../assets/images/Youtube-icon.svg";
 
-export const SOCIALLINKS = [
+export interface SocialLink {
+  name: string;
+  url: string;
+  iconName: string;
+  path: string;
+}
+
+
+export const SOCIALLINKS: SocialLink[] = [
   {
     name: "Instagram",
     url: "https://instagram.com",
@@ -23,39 +31,46 @@ export const SOCIALLINKS = [
   },
 ];
 
-export const BUTTONS = [
-  {
-    firstColumn: ["Company", "Home", "Order", "FAQ", "Contact"],
-  },
-  {
-    secondColumn: [
-      "Template",
-      "Style Guide",
-      "Changelog",
-      "Licence",
-      "Webflow University",
-    ],
-  },
-  {
-    thirdColumn: ["Flowbase", "More Cloneables"],
-  },
-  {
-    navBar: ["Home", "Menu", "Company", "Login"],
-  },
+
+
+
+export interface ButtonColumn {
+  firstColumn?: string[];
+  secondColumn?: string[];
+  thirdColumn?: string[];
+  navBar?: string[];
+  mainButtons?: string[];
+  menubar?: string[];
+}
+
+export const BUTTONS: ButtonColumn[] = [
+  { firstColumn: ["Company", "Home", "Order", "FAQ", "Contact"] },
+  { secondColumn: ["Template", "Style Guide", "Changelog", "Licence", "Webflow University"] },
+  { thirdColumn: ["Flowbase", "More Cloneables"] },
+  { navBar: ["Home", "Menu", "Company", "Login"] },
   { mainButtons: ["Dessert", "Dinner", "Breakfast"] },
-  {
-    menubar: [
-      "Burger Dreams",
-      "Burger Cali",
-      "Burger Spicy",
-      "Burger Waldo",
-      "Burger Bacon Buddy",
-      "Burger Classic",
-    ],
-  },
+  { menubar: [
+    "Burger Dreams", 
+    "Burger Cali", 
+    "Burger Spicy", 
+    "Burger Waldo", 
+    "Burger Bacon Buddy", 
+    "Burger Classic"
+  ]},
 ];
 
-export const TESTMENUITEMS = [
+
+
+export interface MenuItem {
+  id: number;
+  name: string;
+  description: string;
+  price: string;
+  imageUrl: string;
+}
+
+
+export const TESTMENUITEMS: MenuItem[] = [
   {
     id: 1,
     name: "Burger Dreams",

@@ -2,6 +2,15 @@
   "todo": [
     {
       "assignedTo": {
+        "name": "Teo-333"
+      },
+      "creation_time": "2024-05-20T08:06:13.149Z",
+      "id": "8",
+      "references": [],
+      "title": "Rewrite API to strore data localy"
+    },
+    {
+      "assignedTo": {
         "name": "Fedor Rushkevich"
       },
       "creation_time": "2024-05-15T11:29:47.608Z",
@@ -12,6 +21,15 @@
       "id": "7",
       "references": [],
       "title": "Rewrite css"
+    },
+    {
+      "assignedTo": {
+        "name": "Teo-333"
+      },
+      "creation_time": "2024-05-20T08:06:29.218Z",
+      "id": "9",
+      "references": [],
+      "title": "Refactror project to TS"
     }
   ],
   "in-progress": [],

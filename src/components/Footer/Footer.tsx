@@ -1,15 +1,24 @@
 import React from 'react';
-
 import FooterBackground from '../../assets/images/Footer-Background.svg';
-import { BUTTONS, SOCIALLINKS } from '../../constants/constants';
+import { BUTTONS, SOCIALLINKS, ButtonColumn } from '../../constants/constants';
 import ButtonList from '../ButtonList/ButtonList';
 import SocialLink from '../SocialLink/SocialLink';
 import NavLogo from '../../assets/images/Nav-logo.svg';
-
 import './Footer.css';
 
+const getButtonItems = (buttonColumn: ButtonColumn): string[] => {
+  if ('firstColumn' in buttonColumn) {
+    return buttonColumn.firstColumn || [];
+  } else if ('secondColumn' in buttonColumn) {
+    return buttonColumn.secondColumn || [];
+  } else if ('thirdColumn' in buttonColumn) {
+    return buttonColumn.thirdColumn || [];
+  } else {
+    return [];  
+  }
+};
 
-function Footer() {
+const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div className='footer-background'>
@@ -27,9 +36,9 @@ function Footer() {
           <div className="content-text">for small - medium businesses.</div>
         </div>
         <div className="footer-column-right">
-          <ButtonList items={BUTTONS[0].firstColumn} />
-          <ButtonList items={BUTTONS[1].secondColumn} />
-          <ButtonList items={BUTTONS[2].thirdColumn} />
+          {BUTTONS[0] && <ButtonList items={getButtonItems(BUTTONS[0])} />}
+          {BUTTONS[1] && <ButtonList items={getButtonItems(BUTTONS[1])} />}
+          {BUTTONS[2] && <ButtonList items={getButtonItems(BUTTONS[2])} />}
         </div>
       </div>
       <div className="footer-social">
