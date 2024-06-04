@@ -2,7 +2,12 @@ import React from 'react';
 
 import './Tooltip.css';
 
-const Tooltip = ({ children, text }) => {
+interface TooltipProps {
+    children: React.ReactNode;
+    text: string;
+}
+
+const Tooltip: React.FC<TooltipProps> = ({ children, text }) => {
   return (
     <div className="tooltip">
       {children}

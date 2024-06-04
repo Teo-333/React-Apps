@@ -1,18 +1,17 @@
-import React, { useState, useContext } from 'react';
-
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../data/store';
 import './Header.css';
 
 import NavLogo from '../../assets/images/Nav-logo.svg'; 
 import ShoppingCart from '../../assets/images/Nav-shopping-cart.svg'; 
-import { BUTTONS } from '../../constants/constants'; 
+import { BUTTONS } from '../../constants/constants';  
 import { NavLink } from 'react-router-dom';
-import { CountContext } from '../../context/CountContext';
-
 
 const Header = () => {
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
   const [logoAnimation, setLogoAnimation] = useState('');
-  const { count } = useContext(CountContext);
+  const totalQuantity = useSelector((state: RootState) => state.cart.totalQuantity);
 
   const toggleHamburger = () => {
     setHamburgerOpen(!hamburgerOpen);
@@ -34,7 +33,7 @@ const Header = () => {
       </div>
   
       <div className={`navbar-links ${hamburgerOpen ? 'visible' : ''}`}>
-        {BUTTONS[3].navBar.map((button, index) => (
+        {BUTTONS[3].navBar?.map((button: string, index: number) => (
           <NavLink 
             key={index} 
             id={`nav-link-${index}`} 
@@ -52,13 +51,10 @@ const Header = () => {
           alt="Cart Icon" 
           className="cart-icon"
         />
-        <span className="cart-items">{count}</span>
+        <span className="cart-items">{totalQuantity}</span>
       </button>
     </nav>
   );
 };
 
 export default Header;
-
-
-
