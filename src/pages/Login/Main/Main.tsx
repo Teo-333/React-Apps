@@ -1,7 +1,7 @@
 import React, { useState, FormEvent, ChangeEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../../context/AuthContext'; 
-import "./Main.css";
+import "./Main.css"; 
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState<string>('');
@@ -26,7 +26,7 @@ const Login: React.FC = () => {
   const handleLogout = async () => {
     try {
       await logout();
-      navigate('/'); // Redirect to home or login page after logout
+      navigate('/'); 
     } catch (error: any) {
       setError("Failed to log out: " + error.message);
     }
@@ -41,7 +41,7 @@ const Login: React.FC = () => {
 
   if (currentUser) {
     return (
-      <div className='login_container-logged'>
+      <div className='login-container-logged'>
         <p>You are currently logged in as <span className='blue-text'>{currentUser.email}</span>.</p>
         <button className='primary' onClick={handleLogout}>Log out</button>
       </div>
@@ -49,34 +49,36 @@ const Login: React.FC = () => {
   }
 
   return (
-    <div className='login_container'>
-      <h1 className='container_h1'>Login</h1>
-      <form onSubmit={handleLogin} className='container_form'>
-        <div className='form_email'>
-          <label className='form_label'>Username:</label>
+    <div className='login-container'>
+      <h1 className='login-title'>Log in</h1>
+      <form onSubmit={handleLogin} className='login-form'>
+        <div className='form-group-login'>
+          <label className='form-label'>Username :</label>
           <input
+            placeholder='your.email@email.com'
             type="email"
-            className='form_input'
+            className='form-input'
             value={email}
             onChange={(e: ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
             required
           />
         </div>
-        <div className='form_password'>
-          <label className='form_label'>Password:</label>
+        <div className='form-group-login'>
+          <label className='form-label'>Password :</label>
           <input
+            placeholder='your password here'
             type="password"
-            className='form_input'
+            className='form-input'
             value={password}
             onChange={(e: ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
             required
           />
         </div>
-        <div className='container_buttons'>
-          <button type="submit" className='primary'>Login</button>
-          <button type="button" className='buttons-cancel' onClick={handleCancel}>Cancel</button>
+        <div className='button-group'>
+          <button type="submit" className='button-submit'>Submit</button>
+          <button type="button" className='button-cancel' onClick={handleCancel}>Cancel</button>
         </div>
-        {error && <div className='error_message'>{error}</div>}
+        {error && <div className='error-message'>{error}</div>}
       </form>
     </div>
   );
