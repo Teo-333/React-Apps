@@ -1,6 +1,5 @@
 :root{
-  --background_color: #f5f5f5;
-  --img_color:var(--background_color)
+  --background_color: #fbfbfb--img_color:var(--background_color)
   --button_color: #35B8BE;
   --text_color: #333;
 } 
