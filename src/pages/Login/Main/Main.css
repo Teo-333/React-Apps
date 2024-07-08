@@ -1,5 +1,4 @@
-
-    .login-container {
+.login-container {
     font-family: 'Inter', sans-serif,monospace;
     display: flex;
     flex-direction: column;
