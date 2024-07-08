@@ -1,0 +1,39 @@
+.custom-order-form {
+    background-color: #f8fafa;
+    border: 1px solid #e7e7e7;
+    padding: 4%;
+    border-radius: 8px;
+    width: 40%;
+    margin: auto;
+  }
+  
+  .custom-form-group {
+    margin-bottom: 20px;
+  }
+  
+  .custom-form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  
+  .custom-form-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #e7e7e7;
+    border-radius: 4px;
+  }
+  
+  .custom-order-button {
+    background-color: #40c4c1;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+  }
+  

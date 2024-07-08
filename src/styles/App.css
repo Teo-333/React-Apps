@@ -1,6 +1,24 @@
-  body{
-    font-family: "Inter";    
-  }
+:root{
+  --background_color: #f5f5f5;
+  --img_color:var(--background_color)
+  --button_color: #35B8BE;
+  --text_color: #333;
+} 
+ 
+[data-theme="dark"] {
+  --background_color: #333;
+  --img_color: var(--background_color);
+  --button_color: yellow;
+  --text_color: white;
+}
+
+*{
+  transition: all 0.4s ease-in-out;
+}
+
+
+ body{
+    font-family: "Inter", monospace;    
 
   html {
       font-size: 4vw;

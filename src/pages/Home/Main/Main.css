@@ -34,11 +34,12 @@
     font-size: 1em; 
     font-weight: 400;
     line-height: 1.2;
+    color:var(--text_color)
   }
   
 
   .home-text {
-    color: #546285;
+    color: var(--text_color);
     font-size: 0.30em; 
     line-height: 1.5; 
     margin-bottom: 1.1vw; 
@@ -84,10 +85,12 @@
   
   .trustpilot-text{
     font-size: 0.6rem;
+    color: var(--text_color);
   }
 
   .rating-text {
     font-size: 0.25em; 
+    color: var(--text_color);
   }
   
 

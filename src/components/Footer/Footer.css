@@ -60,11 +60,11 @@
     align-items: center;
   }
 
-.footer-links{
-  display: flex;
-  flex-direction: row;
-  gap: 0.3rem;
-  align-items: center;
-  justify-content: center;
-  align-self: center;
+  .footer-links{
+    display: flex;
+    flex-direction: row;
+    gap: 0.3rem;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
 }

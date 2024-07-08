@@ -1,8 +1,9 @@
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;  
+    background-color: var(--background_color);
     padding: 0.5rem 1rem;
   }
   
@@ -17,8 +18,8 @@
   }
   
   .nav-link {
-    text-decoration: none;
-    color: #333;
+    text-decoration: none
+    color: var(--text_color);
     padding: 0.1rem 1rem;
     transition: color 0.3s ease;
   }
